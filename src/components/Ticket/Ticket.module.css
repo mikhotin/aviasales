@@ -1,0 +1,46 @@
+.card {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sum {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2196F3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A0B0B9;
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A4A4A;
+}

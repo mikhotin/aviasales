@@ -1,0 +1,34 @@
+.wrap {
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 50%;
+    border: 1px solid #DFE5EC;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4A4A4A;
+}
+
+.btn-active {
+    background: #2196F3;
+    color: #ffffff;
+    border-color: #2196F3;
+}
+
+.btn-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+
+.btn-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+}
