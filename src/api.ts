@@ -1,4 +1,4 @@
-const fetchData = async () => {
+const fetchData = async ():Promise<any> => {
     const res = await fetch('https://front-test.beta.aviasales.ru/search');
     const { searchId } = await res.json();
     const data = await fetch(`https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`);

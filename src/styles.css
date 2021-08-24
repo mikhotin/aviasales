@@ -13,6 +13,7 @@ ul {
 
 .container {
   display: flex;
+  align-items: flex-start;
   width: 750px;
   margin: 0 auto;
 }
@@ -40,4 +41,16 @@ input[type="checkbox"].visually-hidden {
   clip-path: inset(100%);
 
   -webkit-clip-path: inset(100%);
+}
+
+.btn-show {
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  text-transform: uppercase;
+  background: #2196F3;
+  min-height: 50px;
 }

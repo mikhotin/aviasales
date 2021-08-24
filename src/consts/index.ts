@@ -1,0 +1,1 @@
+export const COUNT_ITEM_IN_VIEW: number = 5;
