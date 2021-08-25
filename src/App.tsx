@@ -20,7 +20,7 @@ const App = () => {
     useEffect(() => {
         fetchData().then(({ tickets }) => {
             setTickets(tickets);
-            setTicketsInView(tickets.slice(0, offset));
+            setTicketsInView(mainSort('cheaper', tickets.slice(0, offset)));
         });
     }, []);
 

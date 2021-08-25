@@ -8,7 +8,7 @@ const calculateDuration = (item: Ticket):number => {
 
 const mainSort = (type: string, items: Ticket[]) => {
     const inner = (a:Ticket, b:Ticket) => {
-        if (type === 'cheaper') {
+        if (type === 'faster') {
             const durationA = calculateDuration(a);
             const durationB = calculateDuration(b);
             if (durationA < durationB) return -1;
