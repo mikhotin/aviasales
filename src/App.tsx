@@ -1,10 +1,11 @@
 import React, { useState, useReducer, useEffect } from 'react';
+import { initialState, reducer, State } from './store';
 
-import { initialState, reducer } from './store';
 import FilterWithTransfer from './components/Filters/FilterWithTransfer/FilterWithTransfer';
 import Filter from './components/Filters/Filter/Filter';
 import TicketsList from './components/TicketsList/TicketsList';
 import fetchData from './api';
+import { mainSort } from './utils/sorts';
 import { COUNT_ITEM_IN_VIEW } from './consts';
 import Ticket from './types';
 
@@ -14,7 +15,7 @@ const App = () => {
     const [offset, setNewOffset] = useState<number>(COUNT_ITEM_IN_VIEW);
     const [filters, dispatch] = useReducer(reducer, initialState);
 
-    const showMoreTickets = (): void => setNewOffset(offset + 5);
+    const showMoreTickets = (): void => setNewOffset(offset + COUNT_ITEM_IN_VIEW);
 
     useEffect(() => {
         fetchData().then(({ tickets }) => {
@@ -26,6 +27,10 @@ const App = () => {
     useEffect(() => {
         setTicketsInView(ticketsColl.slice(0, offset));
     }, [offset]);
+
+    useEffect(() => {
+        setTicketsInView(mainSort(filters.mainFilter, ticketsInView));
+    }, [filters]);
 
     return (
         <div className="container">
